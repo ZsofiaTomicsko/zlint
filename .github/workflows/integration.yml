@@ -27,5 +27,5 @@ jobs:
         key: ${{ runner.os }}-${{ hashFiles('v3/integration/**') }}
 
     - name: Run integration tests
-      run: make integration PARALLELISM=3
+      run: make integration PARALLELISM=6
       working-directory: v3
