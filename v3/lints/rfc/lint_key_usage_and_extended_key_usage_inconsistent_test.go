@@ -60,7 +60,7 @@ func TestKeyUsageAndExtendedKeyUsageInconsistent(t *testing.T) {
 		{
 			Name:           "Test2KUXorBitsServerAuthEKUBit",
 			Filename:       "a1s1c0cs0ep0ts0o0nc1_ds1ke1.pem",
-			ExpectedResult: lint.Error,
+			ExpectedResult: lint.Pass,
 		},
 		{
 			Name:           "Test1ConsistentAnd1InconsistentKUBitWithServerAuthEKUBit",
