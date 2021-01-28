@@ -155,7 +155,7 @@ func TestKeyUsageAndExtendedKeyUsageInconsistent(t *testing.T) {
 //Tests for verifying the truth tables
 func TestEKUServerAuth(t *testing.T) {
 	got := KeyUsage(x509.KeyUsageDigitalSignature).
-		Xor(KeyUsage(x509.KeyUsageKeyEncipherment).
+		Or(KeyUsage(x509.KeyUsageKeyEncipherment).
 			Xor(KeyUsage(x509.KeyUsageKeyAgreement)))
 	for w := range serverAuth {
 		if !got[KeyUsage(w)] {
