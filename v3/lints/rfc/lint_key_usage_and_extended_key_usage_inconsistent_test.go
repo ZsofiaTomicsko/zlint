@@ -60,7 +60,7 @@ func TestKeyUsageAndExtendedKeyUsageInconsistent(t *testing.T) {
 		{
 			Name:           "Test2KUXorBitsServerAuthEKUBit",
 			Filename:       "a1s1c0cs0ep0ts0o0nc1_ds1ke1.pem",
-			ExpectedResult: lint.Error,
+			ExpectedResult: lint.Pass,
 		},
 		{
 			Name:           "Test1ConsistentAnd1InconsistentKUBitWithServerAuthEKUBit",
@@ -155,7 +155,7 @@ func TestKeyUsageAndExtendedKeyUsageInconsistent(t *testing.T) {
 //Tests for verifying the truth tables
 func TestEKUServerAuth(t *testing.T) {
 	got := KeyUsage(x509.KeyUsageDigitalSignature).
-		Xor(KeyUsage(x509.KeyUsageKeyEncipherment).
+		Or(KeyUsage(x509.KeyUsageKeyEncipherment).
 			Xor(KeyUsage(x509.KeyUsageKeyAgreement)))
 	for w := range serverAuth {
 		if !got[KeyUsage(w)] {
