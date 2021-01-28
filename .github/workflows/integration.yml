@@ -27,5 +27,5 @@ jobs:
         key: ${{ runner.os }}-${{ hashFiles('v3/integration/**') }}
 
     - name: Run integration tests
-      run: make integration PARALLELISM=6
+      run: make integration PARALLELISM=6 INT_FLAGS="-fingerprintSummary -lintFilter='e_key_usage_and_extended_key_usage_inconsistent'"
       working-directory: v3
