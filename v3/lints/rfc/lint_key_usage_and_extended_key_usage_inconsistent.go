@@ -83,9 +83,11 @@ func (l *KUAndEKUInconsistent) Execute(c *x509.Certificate) *lint.LintResult {
 //    -- Key usage bits that may be consistent: digitalSignature,
 //    -- keyEncipherment or keyAgreement
 var serverAuth = map[x509.KeyUsage]bool{
-	x509.KeyUsageDigitalSignature: true,
-	x509.KeyUsageKeyEncipherment:  true,
-	x509.KeyUsageKeyAgreement:     true,
+	x509.KeyUsageDigitalSignature:                                true,
+	x509.KeyUsageKeyEncipherment:                                 true,
+	x509.KeyUsageKeyAgreement:                                    true,
+	x509.KeyUsageDigitalSignature | x509.KeyUsageKeyEncipherment: true,
+	x509.KeyUsageDigitalSignature | x509.KeyUsageKeyAgreement:    true,
 }
 
 // Variable containing the consistent KU combinations with Client Authentication EKU:
