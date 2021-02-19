@@ -1116,7 +1116,7 @@ var tldMap = map[string]GTLDPeriod{
 	"caseih": {
 		GTLD:           "caseih",
 		DelegationDate: "2016-10-30",
-		RemovalDate:    "",
+		RemovalDate:    "2021-02-19",
 	},
 	"cash": {
 		GTLD:           "cash",
@@ -4466,7 +4466,7 @@ var tldMap = map[string]GTLDPeriod{
 	"newholland": {
 		GTLD:           "newholland",
 		DelegationDate: "2016-10-30",
-		RemovalDate:    "",
+		RemovalDate:    "2021-02-19",
 	},
 	"news": {
 		GTLD:           "news",
@@ -7031,6 +7031,11 @@ var tldMap = map[string]GTLDPeriod{
 	"xn--45q11c": {
 		GTLD:           "xn--45q11c",
 		DelegationDate: "2014-11-17",
+		RemovalDate:    "",
+	},
+	"xn--4dbrk0ce": {
+		GTLD:           "xn--4dbrk0ce",
+		DelegationDate: "1985-01-01",
 		RemovalDate:    "",
 	},
 	"xn--4gbrim": {
